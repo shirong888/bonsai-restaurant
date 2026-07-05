@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Bonsai | Authentic Asian Kitchen</title>
 
 <style>
@@ -29,7 +28,6 @@ body{
 
 .logo{
     font-size:80px;
-    color:#222;
     font-weight:600;
     margin:0;
 }
@@ -39,15 +37,10 @@ body{
     display:inline-block;
 }
 
-.letter{
-    display:inline-block;
-}
-
 .flower{
     position:absolute;
     left:50%;
     top:-0.55em;
-    transform:translateX(-50%);
     font-size:0.35em;
     line-height:1;
     animation:flowerRotate 10s linear infinite;
@@ -55,12 +48,8 @@ body{
 }
 
 @keyframes flowerRotate{
-    0%{
-        transform:translateX(-50%) rotate(0deg);
-    }
-    100%{
-        transform:translateX(-50%) rotate(360deg);
-    }
+    from{ transform:translateX(-50%) rotate(0deg); }
+    to{ transform:translateX(-50%) rotate(360deg); }
 }
 
 .tagline{
@@ -85,21 +74,26 @@ body{
     text-transform:uppercase;
 }
 
-.about{
+.about,
+.location,
+.opening-hours{
     max-width:900px;
-    margin:0 auto 90px;
+    margin:90px auto;
     padding:0 30px;
     text-align:center;
 }
 
 .about h2,
-.location h2{
+.location h2,
+.opening-hours h2{
     font-size:42px;
     color:#222;
     margin-bottom:30px;
 }
 
-.about p{
+.about p,
+.location p,
+.opening-hours p{
     font-family:Arial, Helvetica, sans-serif;
     font-size:18px;
     line-height:1.9;
@@ -107,27 +101,9 @@ body{
     margin-bottom:24px;
 }
 
-.location{
-    max-width:1100px;
-    margin:90px auto;
-    padding:0 30px;
-}
-
-.location h2{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.location-content{
-    display:flex;
-    gap:40px;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
 .location-image{
-    flex:1;
-    min-width:320px;
+    max-width:900px;
+    margin:0 auto 45px;
 }
 
 .location-image img{
@@ -137,67 +113,61 @@ body{
 }
 
 .location-text{
-    flex:1;
-    min-width:320px;
+    max-width:760px;
+    margin:0 auto;
 }
 
 .location-text h3{
     font-size:30px;
     margin-bottom:20px;
-    color:#222;
-}
-
-.location-text p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    line-height:1.8;
-    color:#555;
 }
 
 .location-text ul{
-    margin:25px 0;
-    padding-left:20px;
+    list-style:none;
+    padding:0;
+    margin:30px 0;
     font-family:Arial, Helvetica, sans-serif;
     font-size:18px;
     line-height:2;
     color:#444;
 }
 
-.location-text li{
-    margin-bottom:10px;
+.address-box{
+    background:#fff;
+    padding:22px;
+    border-radius:16px;
+    margin:35px auto;
+    max-width:520px;
+    box-shadow:0 8px 22px rgba(0,0,0,0.08);
+}
+
+.address-box h4{
+    margin:0 0 10px;
+    color:#6E8B5B;
+    font-size:22px;
+}
+
+.opening-hours strong{
+    color:#6E8B5B;
+    font-size:21px;
 }
 
 @media(max-width:700px){
-    .logo{
-        font-size:58px;
-    }
-
-    .tagline{
-        gap:10px;
-    }
-
-    .line{
-        width:45px;
-    }
-
-    .text{
-        font-size:12px;
-        letter-spacing:2px;
-    }
+    .logo{ font-size:58px; }
+    .line{ width:45px; }
+    .text{ font-size:12px; letter-spacing:2px; }
 
     .about h2,
-    .location h2{
+    .location h2,
+    .opening-hours h2{
         font-size:32px;
     }
 
     .about p,
-    .location-text p,
+    .location p,
+    .opening-hours p,
     .location-text ul{
         font-size:16px;
-    }
-
-    .location-text h3{
-        font-size:26px;
     }
 }
 </style>
@@ -225,98 +195,55 @@ body{
 <section class="about" id="about">
     <h2>Willkommen im Bonsai</h2>
 
-    <p>
-        Mitten im Herzen Dresdens laden wir Sie ein, die Vielfalt der asiatischen Küche in einem stilvollen und entspannten Ambiente zu erleben. Im Bonsai verbinden wir traditionelle Rezepte mit modernen Einflüssen und bereiten jedes Gericht mit frischen Zutaten, Sorgfalt und Leidenschaft zu.
-    </p>
+    <p>Mitten im Herzen Dresdens laden wir Sie ein, die Vielfalt der asiatischen Küche in einem stilvollen und entspannten Ambiente zu erleben. Im Bonsai verbinden wir traditionelle Rezepte mit modernen Einflüssen und bereiten jedes Gericht mit frischen Zutaten, Sorgfalt und Leidenschaft zu.</p>
 
-    <p>
-        Ob kunstvoll zubereitetes Sushi, aromatische Wok-Gerichte oder weitere asiatische Spezialitäten – bei uns stehen Qualität, Authentizität und Genuss im Mittelpunkt. Unser freundliches Team sorgt dafür, dass Sie sich vom ersten Moment an willkommen fühlen.
-    </p>
+    <p>Ob kunstvoll zubereitetes Sushi, aromatische Wok-Gerichte oder weitere asiatische Spezialitäten – bei uns stehen Qualität, Authentizität und Genuss im Mittelpunkt. Unser freundliches Team sorgt dafür, dass Sie sich vom ersten Moment an willkommen fühlen.</p>
 
-    <p>
-        Genießen Sie gemeinsam mit Familie, Freunden oder Kollegen eine kulinarische Reise durch Asien. Abgerundet wird Ihr Besuch durch eine Auswahl an erfrischenden Getränken, ausgewählten Weinen, Bier, Tee und Kaffeespezialitäten – für ein rundum gelungenes Geschmackserlebnis.
-    </p>
+    <p>Genießen Sie gemeinsam mit Familie, Freunden oder Kollegen eine kulinarische Reise durch Asien. Abgerundet wird Ihr Besuch durch eine Auswahl an erfrischenden Getränken, ausgewählten Weinen, Bier, Tee und Kaffeespezialitäten – für ein rundum gelungenes Geschmackserlebnis.</p>
 </section>
 
 <section class="location" id="location">
     <h2>Ihr Weg zu uns</h2>
- <div class="location-image">
-<img src="imagesgoogle-maps-location.jpg" alt="Standort Restaurant Bonsai">
- </div>
-    <div class="location-content">
 
-        <div class="location-text">
+    <div class="location-image">
+        <img src="imagesgoogle-maps-location.jpg" alt="Standort Restaurant Bonsai">
+    </div>
+
+    <div class="location-text">
         <h3>Einfach erreichbar</h3>
-<p>
-    Das Restaurant Bonsai befindet sich in zentraler Lage und ist sowohl mit öffentlichen Verkehrsmitteln als auch mit dem Auto bequem erreichbar.
-</p>
 
-<ul>
-    <li>🚋 Straßenbahn <strong>10</strong> oder <strong>13</strong> bis <strong>Lennéplatz</strong></li>
-    <li>🚶 Nur wenige Gehminuten bis zum Restaurant</li>
-    <li>🚗 Kostenlose Parkmöglichkeiten für unsere Gäste</li>
-</ul>
+        <p>Das Restaurant Bonsai befindet sich in zentraler Lage und ist sowohl mit öffentlichen Verkehrsmitteln als auch mit dem Auto bequem erreichbar.</p>
 
-<div class="address-box">
-    <h4>Adresse</h4>
+        <ul>
+            <li>🚋 Straßenbahn <strong>10</strong> oder <strong>13</strong> bis <strong>Lennéplatz</strong></li>
+            <li>🚶 Nur wenige Gehminuten bis zum Restaurant</li>
+            <li>🚗 Kostenlose Parkmöglichkeiten für unsere Gäste</li>
+        </ul>
 
-    <p>
-        Richard-Strauss-Platz 4–6<br>
-        01219 Dresden<br>
-        Deutschland
-    </p>
-</div>
-
-<p>
-    Wir freuen uns darauf, Sie bald im Bonsai begrüßen zu dürfen.
-</p>
+        <div class="address-box">
+            <h4>Adresse</h4>
+            <p>
+                Richard-Strauss-Platz 4–6<br>
+                01219 Dresden<br>
+                Deutschland
+            </p>
         </div>
 
+        <p>Wir freuen uns darauf, Sie bald im Bonsai begrüßen zu dürfen.</p>
     </div>
 </section>
-<section class="opening-hours">
 
+<section class="opening-hours" id="opening-hours">
     <h2>Öffnungszeiten</h2>
 
-    <p>
-        <strong>Montag</strong><br>
-        11:00 – 15:00<br>
-        17:00 – 22:00
-    </p>
-
-    <p>
-        <strong>Dienstag</strong><br>
-        11:00 – 15:00<br>
-        17:00 – 22:00
-    </p>
-
-    <p>
-        <strong>Mittwoch</strong><br>
-        11:00 – 15:00<br>
-        17:00 – 22:00
-    </p>
-
-    <p>
-        <strong>Donnerstag</strong><br>
-        11:00 – 15:00<br>
-        17:00 – 22:00
-    </p>
-
-    <p>
-        <strong>Freitag</strong><br>
-        11:00 – 23:00
-    </p>
-
-    <p>
-        <strong>Samstag</strong><br>
-        11:00 – 23:00
-    </p>
-
-    <p>
-        <strong>Sonntag</strong><br>
-        11:00 – 23:00
-    </p>
-
+    <p><strong>Montag</strong><br>11:00 – 15:00<br>17:00 – 22:00</p>
+    <p><strong>Dienstag</strong><br>11:00 – 15:00<br>17:00 – 22:00</p>
+    <p><strong>Mittwoch</strong><br>11:00 – 15:00<br>17:00 – 22:00</p>
+    <p><strong>Donnerstag</strong><br>11:00 – 15:00<br>17:00 – 22:00</p>
+    <p><strong>Freitag</strong><br>11:00 – 23:00</p>
+    <p><strong>Samstag</strong><br>11:00 – 23:00</p>
+    <p><strong>Sonntag</strong><br>11:00 – 23:00</p>
 </section>
+
 </body>
 </html>
