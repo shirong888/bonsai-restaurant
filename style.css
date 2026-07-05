@@ -44,8 +44,12 @@ body{
 }
 
 @keyframes flowerRotate{
-    from{ transform:translateX(-50%) rotate(0deg); }
-    to{ transform:translateX(-50%) rotate(360deg); }
+    from{
+        transform:translateX(-50%) rotate(0deg);
+    }
+    to{
+        transform:translateX(-50%) rotate(360deg);
+    }
 }
 
 .tagline{
@@ -70,9 +74,12 @@ body{
     text-transform:uppercase;
 }
 
+/* ---------- General Sections ---------- */
+
 .about,
 .location,
-.opening-hours{
+.opening-hours,
+.reservation{
     max-width:900px;
     margin:90px auto;
     padding:0 30px;
@@ -81,7 +88,8 @@ body{
 
 .about h2,
 .location h2,
-.opening-hours h2{
+.opening-hours h2,
+.reservation h2{
     font-size:42px;
     color:#222;
     margin-bottom:30px;
@@ -89,13 +97,16 @@ body{
 
 .about p,
 .location p,
-.opening-hours p{
+.opening-hours p,
+.reservation p{
     font-family:Arial, Helvetica, sans-serif;
     font-size:18px;
     line-height:1.9;
     color:#555;
     margin-bottom:24px;
 }
+
+/* ---------- Location ---------- */
 
 .location-image{
     max-width:900px;
@@ -130,7 +141,7 @@ body{
 
 .address-box{
     background:#ffffff;
-    padding:22px;
+    padding:24px;
     border-radius:16px;
     margin:35px auto;
     max-width:520px;
@@ -144,88 +155,38 @@ body{
 }
 
 .address-box p{
-    margin:0;
+    margin:0 0 20px;
     line-height:1.8;
     color:#444;
     font-size:17px;
 }
+
+.address-box a{
+    color:#6E8B5B;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.address-box a:hover{
+    text-decoration:underline;
+}
+
+/* ---------- Opening Hours ---------- */
 
 .opening-hours strong{
     color:#6E8B5B;
     font-size:21px;
 }
 
-@media(max-width:700px){
-    .logo{
-        font-size:58px;
-    }
-
-    .tagline{
-        gap:10px;
-    }
-
-    .line{
-        width:45px;
-    }
-
-    .text{
-        font-size:12px;
-        letter-spacing:2px;
-    }
-
-    .about h2,
-    .location h2,
-    .opening-hours h2{
-        font-size:32px;
-    }
-
-    .about p,
-    .location p,
-    .opening-hours p,
-    .location-text ul{
-        font-size:16px;
-    }
-
-    .location-text h3{
-        font-size:26px;
-    }
-}
-.reservation{
-    width:100%;
-    max-width:900px;
-    margin:100px auto;
-    padding:0 30px;
-    text-align:center;
-    display:block;
-    clear:both;
-    box-sizing:border-box;
-}
-
-.reservation h2{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:20px;
-    color:#222;
-}
-
-.reservation p{
-    text-align:center;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    line-height:1.8;
-    color:#555;
-    margin-bottom:35px;
-}
+/* ---------- Reservation ---------- */
 
 .reservation-form{
-    width:100%;
     max-width:600px;
     margin:0 auto;
-    padding:35px;
     background:#ffffff;
+    padding:35px;
     border-radius:18px;
     box-shadow:0 10px 30px rgba(0,0,0,0.12);
-    box-sizing:border-box;
 
     display:flex;
     flex-direction:column;
@@ -240,13 +201,21 @@ body{
     padding:15px;
     border:1px solid #ddd;
     border-radius:10px;
-    font-size:16px;
     font-family:Arial, Helvetica, sans-serif;
+    font-size:16px;
+    transition:.3s;
 }
 
 .reservation-form textarea{
     min-height:120px;
     resize:vertical;
+}
+
+.reservation-form input:focus,
+.reservation-form select:focus,
+.reservation-form textarea:focus{
+    border-color:#6E8B5B;
+    outline:none;
 }
 
 .reservation-form button{
@@ -263,202 +232,51 @@ body{
 .reservation-form button:hover{
     background:#567046;
 }
-body{
-    margin:0;
-    background:#f8f6f2;
-    font-family:Georgia, "Times New Roman", serif;
-    color:#222;
-}
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
-
-.container{
-    text-align:center;
-    padding:0 20px;
-}
-
-.logo{
-    font-size:80px;
-    font-weight:600;
-    margin:0;
-}
-
-.i-wrapper{
-    position:relative;
-    display:inline-block;
-}
-
-.flower{
-    position:absolute;
-    left:50%;
-    top:-0.55em;
-    font-size:0.35em;
-    line-height:1;
-    animation:flowerRotate 10s linear infinite;
-    transform-origin:center center;
-}
-
-@keyframes flowerRotate{
-    from{ transform:translateX(-50%) rotate(0deg); }
-    to{ transform:translateX(-50%) rotate(360deg); }
-}
-
-.tagline{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:18px;
-    margin-top:18px;
-}
-
-.line{
-    width:90px;
-    height:1px;
-    background:#6E8B5B;
-}
-
-.text{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:15px;
-    letter-spacing:4px;
-    color:#6E8B5B;
-    text-transform:uppercase;
-}
-
-.about,
-.location,
-.opening-hours{
-    max-width:900px;
-    margin:90px auto;
-    padding:0 30px;
-    text-align:center;
-}
-
-.about h2,
-.location h2,
-.opening-hours h2{
-    font-size:42px;
-    color:#222;
-    margin-bottom:30px;
-}
-
-.about p,
-.location p,
-.opening-hours p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    line-height:1.9;
-    color:#555;
-    margin-bottom:24px;
-}
-
-.location-image{
-    max-width:900px;
-    margin:0 auto 45px;
-}
-
-.location-image img{
-    width:100%;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-
-.location-text{
-    max-width:760px;
-    margin:0 auto;
-}
-
-.location-text h3{
-    font-size:30px;
-    margin-bottom:20px;
-}
-
-.location-text ul{
-    list-style:none;
-    padding:0;
-    margin:30px 0;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    line-height:2;
-    color:#444;
-}
-
-.address-box{
-    background:#fff;
-    padding:22px;
-    border-radius:16px;
-    margin:35px auto;
-    max-width:520px;
-    box-shadow:0 8px 22px rgba(0,0,0,0.08);
-}
-
-.address-box h4{
-    margin:0 0 10px;
-    color:#6E8B5B;
-    font-size:22px;
-}
-
-.opening-hours strong{
-    color:#6E8B5B;
-    font-size:21px;
-}
+/* ---------- Mobile ---------- */
 
 @media(max-width:700px){
-    .logo{ font-size:58px; }
-    .line{ width:45px; }
-    .text{ font-size:12px; letter-spacing:2px; }
+
+    .logo{
+        font-size:58px;
+    }
+
+    .line{
+        width:45px;
+    }
+
+    .text{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .about,
+    .location,
+    .opening-hours,
+    .reservation{
+        padding:0 20px;
+    }
 
     .about h2,
     .location h2,
-    .opening-hours h2{
+    .opening-hours h2,
+    .reservation h2{
         font-size:32px;
     }
 
     .about p,
     .location p,
     .opening-hours p,
+    .reservation p,
     .location-text ul{
         font-size:16px;
     }
-}
-.contact{
-    max-width:900px;
-    margin:90px auto;
-    padding:0 30px 80px;
-    text-align:center;
-}
 
-.contact h2{
-    font-size:42px;
-    color:#222;
-    margin-bottom:25px;
-}
+    .location-text h3{
+        font-size:26px;
+    }
 
-.contact p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:18px;
-    line-height:1.8;
-    color:#555;
-}
-
-.phone{
-    margin-top:20px;
-    font-size:30px;
-    font-weight:bold;
-}
-
-.phone a{
-    color:#6E8B5B;
-    text-decoration:none;
-    transition:0.3s;
-}
-
-.phone a:hover{
-    color:#567046;
+    .reservation-form{
+        padding:25px;
+    }
 }
